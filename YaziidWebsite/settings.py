@@ -28,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY='$r+av9h!ah*48+li#mre%#0l2h%#9p1j7y7g89)blm#c9xn)5x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['yaziidbabyshop.com']
+ALLOWED_HOSTS = ['yaziidbabyshop.herokuapp.com', '127.0.0.1']
 
 
 # Application definition

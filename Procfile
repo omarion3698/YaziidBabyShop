@@ -1,1 +1,1 @@
-web: gunicorn shop.wsgi:application --log-file -
+web: gunicorn YaziidWebsite.wsgi --log-file -
