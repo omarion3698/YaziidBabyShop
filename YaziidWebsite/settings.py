@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-*45yv$&!l04^&0mn*3hg#$2rqwi+#o(jzm3e6g#q+9@t206v2_
 # SECRET_KEY='$r+av9h!ah*48+li#mre%#0l2h%#9p1j7y7g89)blm#c9xn)5x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['yaziidbabyshop.herokuapp.com', '127.0.0.1']
 
