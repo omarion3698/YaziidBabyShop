@@ -10,8 +10,8 @@ from django.contrib import messages
 from .models import *
 import json
 import datetime
-from . utils import cookieCart, cartData, guestOrder
-from .forms import OrderForm, CreateUserForm, UserCreationForm
+from .utils import cookieCart, cartData, guestOrder
+from .forms import OrderForm, CreateUserForm
 # from .filters import OrderFilter
 
 def registerPage(request):
@@ -27,7 +27,7 @@ def registerPage(request):
 			return redirect('login')
 		messages.error(request, "Unsuccessful registration. Invalid information.")
 	form = CreateUserForm()
-	context = {'register_form':form}
+	context = {'form':form}
 	return render(request, 'shop/register.html', context)
 
 
