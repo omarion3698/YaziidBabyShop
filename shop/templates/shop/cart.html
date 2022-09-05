@@ -4,7 +4,7 @@
 <div class="row">
 	<div class="col-lg-12">
 		<div class="box-element">
-               <a  class="btn btn-outline-dark" href="{% url 'shop' %}">&#x2190; Continue Shopping</a>
+               <a class="btn btn-outline-dark" href="{% url 'shop' %}">&#x2190; Continue Shopping</a>
                <br>
                <br>
 
@@ -41,7 +41,7 @@
 				<img data-product="{{item.product.id}}" data-action="remove" class="chg-quantity update-cart" src="{% static 'images/2+arrow-down.png '%}">
 			</div>
 		</div>
-		<div style="flex:1"><p>Ksh. {{item.get_total}}</p></div>
+		<div style="flex:1"><p>Ksh. {{item.get_total|floatformat:2}}</p></div>
 	</div>
 	{% endfor %}
 </div>

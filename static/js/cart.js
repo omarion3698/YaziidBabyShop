@@ -40,9 +40,8 @@ function addCookieItem(productId, action) {
 }
 
 function updateUserOrder(productId, action){
-    console.log('User is authenticated, sending data...')
-
     var url = '/update_item/'
+    console.log('URL:', url)
     fetch(url,{
         method: 'POST',
         headers:{
@@ -55,7 +54,7 @@ function updateUserOrder(productId, action){
         return response.json()
     })
     .then((data) => {
-        console.log('Data:', data)
+        // console.log('Data:', data)
         location.reload()
-    })
+    });
 }

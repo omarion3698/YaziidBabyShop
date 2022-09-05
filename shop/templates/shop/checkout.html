@@ -57,7 +57,7 @@
                <div class="cart-row">
                     <div style="flex:2"><img class="row-image" src="{{item.product.imageURL}}"></div>
                     <div style="flex:2"><p>{{item.product.name}}</p></div>
-                    <div style="flex:1"><p>Ksh. {{item.product.price}}</p></div>
+                    <div style="flex:1"><p>Ksh. {{item.product.price|floatformat:2}}</p></div>
                     <div style="flex:1"><p>{{item.quantity}}</p></div>
                </div>
                {% endfor %}
@@ -128,14 +128,16 @@
           form.addEventListener('submit', function(e){
                e.preventDefault()
                console.log('Form submitted...')
-               document.getElementById('form-button').classList.add("hidden")
-               document.getElementById('payment-info').classList.remove("hidden")
+               document.getElementById('form-button').classList.add("hidden");
+               document.getElementById('payment-info').classList.remove("hidden");
           })
 
           // document.getElementById('make-payment').addEventListener('click', function(e){
           //      submitFormData()
           // })
 
+          var total = '{{order.get_cart_total|floatformat:2}}'
+          
           function submitFormData(){
                console.log('Payment button clicked')
 
